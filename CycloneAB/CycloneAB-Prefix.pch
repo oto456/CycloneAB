@@ -1,0 +1,23 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#import "MKNetworkKit.h"  // 使用MKNetworkkit框架 所以在预编译头文件中导入。
+#import "GetPreSetImage.h" // 使用默认图片 为了方便
+#import "CircleJM.h"
+#import "PersonJM.h"
+#import "APService.h"
+#import "ImageConvert.h"
+#import <CommonCrypto/CommonDigest.h>
+#endif
