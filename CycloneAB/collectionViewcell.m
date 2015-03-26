@@ -19,6 +19,14 @@
     return self;
 }
 
+
+
+//-(void)willMoveToWindow:(UIWindow *)newWindow
+//{
+//    _image.layer.masksToBounds=YES;
+//    _image.layer.cornerRadius=35;
+//}
+
 - (void)update
 {
    _badge=[[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 20, 20)];

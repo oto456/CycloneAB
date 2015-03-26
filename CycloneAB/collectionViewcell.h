@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RoundImageview.h"
 
 @interface collectionViewcell : UICollectionViewCell
-@property (weak, nonatomic) IBOutlet UIImageView *image;
+@property (weak, nonatomic) IBOutlet RoundImageview *image;
 @property (weak, nonatomic) IBOutlet UILabel *label; //名字
 @property (weak,nonatomic) NSString * circle_id;
 @property(strong,nonatomic)NSString * circle_passw;

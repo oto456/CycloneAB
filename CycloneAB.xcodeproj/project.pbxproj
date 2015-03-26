@@ -92,6 +92,8 @@
 		52F3934A1A0FE3C2005DB4CD /* MySocialTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52F393441A0FE3C2005DB4CD /* MySocialTableViewController.m */; };
 		52F3934C1A0FE3C2005DB4CD /* changeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52F393481A0FE3C2005DB4CD /* changeViewController.m */; };
 		52F3934F1A0FE7F6005DB4CD /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52F3934E1A0FE7F6005DB4CD /* MeViewController.m */; };
+		F68AE0B31AC4640700C07804 /* RoundImageview.m in Sources */ = {isa = PBXBuildFile; fileRef = F68AE0B21AC4640700C07804 /* RoundImageview.m */; };
+		F68AE0B61AC46C5100C07804 /* UIImage+Round.m in Sources */ = {isa = PBXBuildFile; fileRef = F68AE0B51AC46C5100C07804 /* UIImage+Round.m */; };
 		F6BF6B111AC2F5350055BFEC /* KKP.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6BF6B101AC2F5350055BFEC /* KKP.storyboard */; };
 		F6BF6B241AC2F5540055BFEC /* KKPCollectionlayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F6BF6B131AC2F5540055BFEC /* KKPCollectionlayout.m */; };
 		F6BF6B251AC2F5540055BFEC /* KKPCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6BF6B151AC2F5540055BFEC /* KKPCollectionViewController.m */; };
@@ -264,6 +266,10 @@
 		99F7F30D015346E05351C436 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1E1E378A335F358A9841D1F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		DAEC6DF475D428D441D869A7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		F68AE0B11AC4640700C07804 /* RoundImageview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoundImageview.h; sourceTree = "<group>"; };
+		F68AE0B21AC4640700C07804 /* RoundImageview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoundImageview.m; sourceTree = "<group>"; };
+		F68AE0B41AC46C5100C07804 /* UIImage+Round.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Round.h"; sourceTree = "<group>"; };
+		F68AE0B51AC46C5100C07804 /* UIImage+Round.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Round.m"; sourceTree = "<group>"; };
 		F6BF6B101AC2F5350055BFEC /* KKP.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = KKP.storyboard; sourceTree = "<group>"; };
 		F6BF6B121AC2F5540055BFEC /* KKPCollectionlayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKPCollectionlayout.h; sourceTree = "<group>"; };
 		F6BF6B131AC2F5540055BFEC /* KKPCollectionlayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKPCollectionlayout.m; sourceTree = "<group>"; };
@@ -438,6 +444,10 @@
 				180EC18919EE9EEA00F35ADB /* mycollectionViewController.m */,
 				180EC18519EE9E8500F35ADB /* collectionViewcell.h */,
 				180EC18619EE9E8600F35ADB /* collectionViewcell.m */,
+				F68AE0B11AC4640700C07804 /* RoundImageview.h */,
+				F68AE0B21AC4640700C07804 /* RoundImageview.m */,
+				F68AE0B41AC46C5100C07804 /* UIImage+Round.h */,
+				F68AE0B51AC46C5100C07804 /* UIImage+Round.m */,
 			);
 			name = collectionview;
 			sourceTree = "<group>";
@@ -939,6 +949,7 @@
 				52F3934C1A0FE3C2005DB4CD /* changeViewController.m in Sources */,
 				5248C2C21A02B62F00A4786D /* MyDetailDao.m in Sources */,
 				181D3FB919F0FA0800E4FA3C /* UIImageView+MKNetworkKitAdditions.m in Sources */,
+				F68AE0B31AC4640700C07804 /* RoundImageview.m in Sources */,
 				52088E431A106DC70047BEE5 /* BasicTableViewController.m in Sources */,
 				52F393491A0FE3C2005DB4CD /* myCardTableViewCell.m in Sources */,
 				5273BA4619FCE5C00094FB61 /* personDetailTableViewController.m in Sources */,
@@ -947,6 +958,7 @@
 				181D3FCB19F360F800E4FA3C /* addorcreateViewController.m in Sources */,
 				5248C2F21A0F25F800A4786D /* JchooseToPublicTableViewController.m in Sources */,
 				5273BA791A0004FB0094FB61 /* secondVContainerViewController.m in Sources */,
+				F68AE0B61AC46C5100C07804 /* UIImage+Round.m in Sources */,
 				18DD312219F8AB660086B606 /* LoginAndRegisterDAO.m in Sources */,
 				5248C2C81A03F86F00A4786D /* GetPreSetImage.m in Sources */,
 				529136221A2606DB005C0D84 /* ImageConvert.m in Sources */,
