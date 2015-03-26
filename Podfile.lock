@@ -1,0 +1,26 @@
+PODS:
+  - FlatUIKit (1.6)
+  - FMDB (2.5):
+    - FMDB/standard (= 2.5)
+  - FMDB/common (2.5)
+  - FMDB/standard (2.5):
+    - FMDB/common
+  - ReactiveCocoa (2.4.7):
+    - ReactiveCocoa/UI (= 2.4.7)
+  - ReactiveCocoa/Core (2.4.7):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.4.7)
+  - ReactiveCocoa/UI (2.4.7):
+    - ReactiveCocoa/Core
+
+DEPENDENCIES:
+  - FlatUIKit
+  - FMDB
+  - ReactiveCocoa
+
+SPEC CHECKSUMS:
+  FlatUIKit: 48b78e6d026c2f2c8a733425aaa5015c99ffc079
+  FMDB: 0efa188cf0dd1ce82c27a478cd5f5fa245308677
+  ReactiveCocoa: 313fc53cc9aeb2bbbc3f5f13c7eac16478d9af8f
+
+COCOAPODS: 0.35.0

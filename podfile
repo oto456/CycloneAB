@@ -1,0 +1,4 @@
+platform:ios,'7.1'
+pod 'ReactiveCocoa'
+pod 'FMDB'
+pod 'FlatUIKit'

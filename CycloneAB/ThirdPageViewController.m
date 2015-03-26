@@ -7,6 +7,7 @@
 //
 
 #import "ThirdPageViewController.h"
+#import "KKPCollectionViewController.h"
 
 @interface ThirdPageViewController ()
 
@@ -23,6 +24,7 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     [self.navigationItem setTitle:@"我"];
+    self.tableView.allowsSelection=YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -42,6 +44,18 @@
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
     return 1;
+}
+- (IBAction)Click:(id)sender {
+    UIStoryboard *secondStroyBoard=[UIStoryboard storyboardWithName:@"KKP" bundle:nil];
+    KKPCollectionViewController *view2=[secondStroyBoard instantiateViewControllerWithIdentifier:@"KKPFirstPage"];
+    [self.navigationController pushViewController:view2 animated:YES];
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+   
+    NSLog(@"%d",indexPath.row);
+    
 }
 
 /*
@@ -73,6 +87,21 @@
     }   
 }
 */
+
+//-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+//    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+//    
+//    if (indexPath.row == currentClickIndex) {
+//        isOpenCell = !isOpenCell;
+//    }else{
+//        isOpenCell = YES;
+//    }
+//    
+//    currentClickIndex = indexPath.row;
+//    
+//    [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+//}
+
 
 /*
 // Override to support rearranging the table view.

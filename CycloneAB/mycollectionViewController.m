@@ -107,6 +107,8 @@
         cell.circle_id=temp.circle_id;
         cell.label.text=temp.circle_name;
         cell.circle_passw=temp.circle_passw;
+        cell.image.layer.masksToBounds=YES;
+        cell.image.layer.cornerRadius=35;
         cell.image.image=[GetPreSetImage getPreSetCircleLoge];
         if (temp.circle_logo) {
             cell.image.image=[ImageConvert NSDataToImage:temp.circle_logo];
@@ -124,6 +126,9 @@
     collectionViewcell *cell =(collectionViewcell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"circle" forIndexPath:indexPath];
     cell.label.text=[NSString stringWithFormat:@"%ld",(long)indexPath.row];
     cell.image.image=[GetPreSetImage getPreSetCircleLoge];
+    cell.image.layer.masksToBounds=YES;
+    cell.image.layer.cornerRadius=35;
+
     cell.circle_id=[NSString stringWithFormat:@"hello %ld",(long)indexPath.row];
     return cell;
     }

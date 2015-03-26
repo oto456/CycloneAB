@@ -7,12 +7,14 @@
 //
 
 #import "registerViewController.h"
+#import <ReactiveCocoa.h>
 
 @interface registerViewController ()<UIAlertViewDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *username;
 @property (weak, nonatomic) IBOutlet UITextField *password;
 @property (weak, nonatomic) IBOutlet UITextField *name;
 @property (weak, nonatomic) IBOutlet UITextField *password2;
+@property (weak, nonatomic) IBOutlet UIButton *btn_ok;
 
 @end
 
@@ -25,6 +27,22 @@
     _bl.delegate=self;
     _password.secureTextEntry=YES;
     _password2.secureTextEntry=YES;
+    
+    RAC(_password2,backgroundColor)=[_password2.rac_textSignal map:^id(NSString* value) {
+        if (_password.text.length>0) {
+            return [value isEqualToString:_password.text]?[UIColor greenColor]:[UIColor redColor];
+
+        }
+        return nil;
+}];
+    
+    RAC(_btn_ok,enabled)=[RACSignal combineLatest:@[_username.rac_textSignal,
+                                                    _password.rac_textSignal,
+                                                    _name.rac_textSignal,
+                                                    _password2.rac_textSignal] reduce:^(NSString *a,NSString*b,NSString *c,NSString *d){
+                                                        return @((a.length>3)&&(b.length>0)&&(c.length>0)&&(d.length>0));
+                                                    }];
+    
 }
 
 - (void)didReceiveMemoryWarning {

@@ -7,12 +7,15 @@
 //
 
 #import "loginViewController.h"
+#import <ReactiveCocoa.h>
 
 @interface loginViewController ()
 
 @property (weak, nonatomic) IBOutlet UISwitch *switch_remember;
 @property (weak, nonatomic) IBOutlet UITextField *txt_name;
 @property (weak, nonatomic) IBOutlet UITextField *txt_pwd;
+@property (weak, nonatomic) IBOutlet UIButton *button_login;
+@property (weak, nonatomic) IBOutlet UIButton *button_register;
 
 @end
 
@@ -64,8 +67,12 @@
     _bl=[[LoginAndRegisterBL alloc] init];
     _bl.delegate=self;
     _txt_pwd.secureTextEntry=YES;
+    RAC(_button_login,enabled)=[RACSignal combineLatest:@[_txt_name.rac_textSignal,_txt_pwd.rac_textSignal] reduce:^(NSString *name,NSString *pass){
+        return @(name.length>3&&pass.length>0);
+    }];
     
     
+
 }
 
 - (void)didReceiveMemoryWarning
