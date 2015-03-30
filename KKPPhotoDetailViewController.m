@@ -29,7 +29,7 @@
     
     
     _tableView.sectionHeaderHeight = 350;
-    _headerCotainer= [[UIView alloc]initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] applicationFrame].size.width, 580)];
+    _headerCotainer= [[UIView alloc]initWithFrame:CGRectMake(0, 0, [[UIScreen mainScreen] applicationFrame].size.width, 610)];
     //设置视图的颜色
     _tableHeaderController=[self.storyboard instantiateViewControllerWithIdentifier:@"KKPtableHeaderViewController"];
     _tableHeaderController.view.frame=_headerCotainer.frame;

@@ -182,7 +182,7 @@
     UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleTopMargin |
     UIViewAutoresizingFlexibleBottomMargin;
     
-    self.blackView.backgroundColor = [UIColor blackColor];
+    self.blackView.backgroundColor = [UIColor whiteColor];
     self.blackView.alpha = 0.0;
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(blackViewPressed)];
     [self.blackView addGestureRecognizer:tap];

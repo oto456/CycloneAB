@@ -9,13 +9,14 @@
 #import "loginViewController.h"
 #import <ReactiveCocoa.h>
 
-@interface loginViewController ()
+@interface loginViewController ()<UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UISwitch *switch_remember;
 @property (weak, nonatomic) IBOutlet UITextField *txt_name;
 @property (weak, nonatomic) IBOutlet UITextField *txt_pwd;
 @property (weak, nonatomic) IBOutlet UIButton *button_login;
 @property (weak, nonatomic) IBOutlet UIButton *button_register;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end
 
@@ -36,6 +37,23 @@
     }
 }
 
+-(void)textFieldDidBeginEditing:(UITextField *)textField
+{
+//    [_scrollView setFrame:CGRectMake(0, 0, _scrollView.frame.size.width, _scrollView.frame.size.height+216)];
+    [_scrollView setContentOffset:CGPointMake(0, 100) animated:YES];
+    _scrollView.tag=0;
+}
+
+
+-(void)hideKeyboard
+{
+    if (_scrollView.tag==0) {
+        [_scrollView setContentOffset:CGPointMake(0, 0) animated:YES];
+//        [_scrollView setFrame:CGRectMake(0, 0, _scrollView.frame.size.width, _scrollView.frame.size.height-216)];
+        [self.view endEditing:YES];
+        _scrollView.tag=1;
+    }
+}
 
 - (IBAction)releaseKeyboard:(id)sender {
     //点击背景释放键盘
@@ -71,9 +89,12 @@
         return @(name.length>3&&pass.length>0);
     }];
     
-    
+    [_scrollView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyboard)]];
 
 }
+
+
+
 
 - (void)didReceiveMemoryWarning
 {
